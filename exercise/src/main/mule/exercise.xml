@@ -15,10 +15,10 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 				<ee:set-payload ><![CDATA[%dw 2.0
 output application/json
 var name = attributes.queryParams.name
-var date = now()
+var date = now() as String {format: "MM/dd/y"}
 ---
 
-	"Hello " ++ name ++ ", " ++ "welcome to Mulesoft, today is" ++ " " ++ date
+"Hello " ++ name ++ ", " ++ "welcome to Mulesoft, today is " ++ date
 ]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
