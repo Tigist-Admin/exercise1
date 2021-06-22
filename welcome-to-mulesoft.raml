@@ -1,0 +1,19 @@
+#%RAML 1.0
+title: welcome to mulesoft
+/student:
+  post:
+    queryParameters:
+      name:
+        type: string
+        description: name of student
+        maxLength: 15
+        required: false
+        example: Abebe
+    responses:
+      200:
+        body:
+          application/json:
+            examples: {
+              msg: "Hello Abebe, welcome to Mulesoft, today is 6/14/2021"
+              }
+              
